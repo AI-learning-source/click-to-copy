@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+      margin: 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <script>
+    function copyToClipboard() {
+      var text = "This is the text to copy"; // Replace with the text you want to copy
+      navigator.clipboard.writeText(text).then(function() {
+        alert("Text copied to clipboard!");
+      }, function(err) {
+        console.error('Failed to copy: ', err);
+      });
+    }
+  </script>
+</head>
+<body>
+  <button onclick="copyToClipboard()">Copy Text</button>
+</body>
+</html>
